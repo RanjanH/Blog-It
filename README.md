@@ -1,2 +1,2 @@
 # Blog It
- A blogging website made using HTML, CSS, JS, NodeJS
+ A blogging website made using HTML, CSS, JS, NodeJS (Under development)

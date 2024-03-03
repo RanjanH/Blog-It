@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2a2be8978e.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/sidebar.css">
+    <title>Sidebar</title>
+</head>
+<body>
+    <div id="nav-cont" class="active">
+        <div class="navigation-cell full-view">
+            <div class="sidebar">
+                <div class="user cells">
+                    <i class="cell-icon fa-solid fa-user"></i><p class="cell-text">Account Holder</p>
+                </div>
+                <div class="home cells">
+                    <i class='cell-icon fa-solid fa-house' ></i><p class="cell-text">Home</p>
+                </div>
+                <div class="latest cells">
+                    <i class='cell-icon fa-solid fa-bullhorn' ></i><p class="cell-text">Latest</p>
+                </div>
+                <div class="trending cells">
+                    <i class='cell-icon fa-solid fa-fire' ></i><p class="cell-text">Trending</p>
+                </div>
+                <div class="filter cells">
+                    <i class='cell-icon fa-solid fa-filter' ></i><p class="cell-text">Filters</p>
+                    <i class="down-angle fa-solid fa-angle-down"></i>
+                </div>
+                <div class="settings cells">
+                    <i class='cell-icon fa-solid fa-gear' ></i><p class="cell-text">Settings</p>
+                </div>
+                <div class="settings cells">
+                    <i class='cell-icon fa-solid fa-right-from-bracket' ></i><p class="cell-text">Log Out</p>
+                </div>
+                <div id="toggle"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let toggle = document.querySelector("#toggle");
+        let nav = document.querySelector(".navigation-cell");
+        nav.onclick = function () {
+        if (nav.classList.contains("full-view")){
+            let navCont = document.querySelector("#nav-cont");
+            navCont.id = "nav-container";
+        } else {
+            let navCont = document.querySelector("#nav-container");
+            navCont.id = "nav-cont";
+        }
+            nav.classList.toggle("full-view");
+        }
+    </script>
+</body>
+</html>
